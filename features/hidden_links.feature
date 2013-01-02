@@ -9,6 +9,7 @@
       | user@ticketee.com  | password | false | 
       | admin@ticketee.com | password | true  |
     And there is a project called "subl"
+    And "user@ticketee.com" can view the "subl" project
 
   Scenario: New project link is hidden for non-signed-in users
     Given I am on the homepage
@@ -22,11 +23,6 @@
     Given I am signed in as "admin@ticketee.com"
     Then I should see the "New Project" link
 
-  Scenario: Edit project link is hidden for non-signed-in users
-    Given I am on the homepage
-    When I follow "subl"
-    Then I should not see the "Edit Project" link
-
   Scenario: Edit project link is hidden for signed-in users
     Given I am signed in as "user@ticketee.com"
     When I follow "subl"
@@ -36,11 +32,6 @@
     Given I am signed in as "admin@ticketee.com"
     When I follow "subl"
     Then I should see the "Edit Project" link
-
-  Scenario: Delete project link is hidden for non-signed-in users
-    Given I am on the homepage
-    When I follow "subl"
-    Then I should not see the "Delete Project" link
 
   Scenario: Delete project link is hidden for signed-in users
     Given I am signed in as "user@ticketee.com"

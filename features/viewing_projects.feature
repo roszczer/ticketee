@@ -11,7 +11,10 @@ Feature: Viewing projects
     And there is a project called "subl"
     And "user@ticketee.com" can view the "subl" project
 
+    And there is a project called "Internet Explorer"
+
   Scenario: Listing all projects
 	 	And I am on the homepage
+	 	Then I should not see "Internet Explorer"
 		When I follow "subl"
 		Then I should be on the project page for "subl"

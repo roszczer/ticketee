@@ -12,6 +12,7 @@
  		And "user@ticketee.com" has created a ticket for this project:
  			| title          | description                   |
  			| Make it shiny! | Gradients! Starbursts! Oh my! |
+ 		And "user@ticketee.com" can view the "subl" project
  		Given I am on the homepage
  		When I follow "subl"
  		And I follow "Make it shiny!"

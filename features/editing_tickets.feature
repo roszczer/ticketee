@@ -9,6 +9,8 @@
       | user@ticketee.com | password |
     And I am signed in as them
  		Given there is a project called "subl"
+ 		And "user@ticketee.com" can view the "subl" project
+    And "user@ticketee.com" can edit tickets in the "subl" project
  		And "user@ticketee.com" has created a ticket for this project:
  			| title          | description                   |
  			| Make it shiny! | Gradients! Starbursts! Oh my! |

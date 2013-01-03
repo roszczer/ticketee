@@ -4,9 +4,6 @@ class Admin::UsersController < Admin::BaseController
   	@users = User.all(:order => "email")
   end
 
-  def show
-  end
-
   def new
   	@user = User.new
   end
@@ -21,6 +18,9 @@ class Admin::UsersController < Admin::BaseController
       flash[:alert] = "User has not been created."
       render :action => "new"
     end
+  end
+
+  def show
   end
 
   def edit

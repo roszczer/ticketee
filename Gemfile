@@ -37,6 +37,8 @@ end
 
 gem 'devise', '~>1.4.3'
 
+gem 'cancan'
+
 =begin
 group :test do
 	# Pretty printed test output
